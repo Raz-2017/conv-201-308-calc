@@ -72,10 +72,9 @@ function updateMessage(input, response) {
   if (!response.output) {
     response.output = {};
   } else {
-    // Check if the intent returned from Conversation service is add or multiply,
+// Check if the intent returned from Conversation service is add or multiply,
 // perform the calculation and update the response
-if (response.intents.length > 0 && (response.intents[0].intent === 'add' ||
-response.intents[0].intent === 'multiply')) {
+if (response.intents.length > 0 && (response.intents[0].intent === 'add' || response.intents[0].intent === 'multiply')) {
 response = getCalculationResult(response);
 }
   }
